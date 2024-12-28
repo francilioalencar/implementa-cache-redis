@@ -12,12 +12,12 @@ import com.implementa.cacheredis.domain.entity.state.StateBuilder;
 import com.implementa.cacheredis.infra.framework.model.StateEntity;
 
 @Service
-public class RepositoryJpaImplements implements StateRepository {
+public class StateRepositoryImplements implements StateRepository {
 
 
     private final StateEntityRepository stateEntityRepository;
 
-    public RepositoryJpaImplements(StateEntityRepository stateEntityRepository){
+    public StateRepositoryImplements(StateEntityRepository stateEntityRepository){
         this.stateEntityRepository = stateEntityRepository;
     }
 

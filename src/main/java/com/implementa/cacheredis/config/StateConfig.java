@@ -11,17 +11,17 @@ import com.implementa.cacheredis.application.usecase.SaveStateImplements;
 public class StateConfig {
 
     @Bean
-    public FindStateImplements findStateImplements(StateRepository callStateRepositoryJpa){
-        return new FindStateImplements(callStateRepositoryJpa);
+    public FindStateImplements findStateImplements(StateRepository stateRepository){
+        return new FindStateImplements(stateRepository);
     }
     
 
 
 
     @Bean
-    public SaveStateImplements saveStateImplements(StateRepository callStateRepositoryJpa){
+    public SaveStateImplements saveStateImplements(StateRepository stateRepository){
 
-        return new SaveStateImplements(callStateRepositoryJpa);
+        return new SaveStateImplements(stateRepository);
 
     }
 
