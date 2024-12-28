@@ -1,13 +1,13 @@
 package com.implementa.cacheredis.application.usecase;
 
-import com.implementa.cacheredis.application.gateways.CallStateRepositoryJpa;
+import com.implementa.cacheredis.application.gateways.StateRepository;
 import com.implementa.cacheredis.domain.entity.state.State;
 
 public class SaveStateImplements implements SaveState{
 
-    private final CallStateRepositoryJpa callStateRepositoryJpa;
+    private final StateRepository callStateRepositoryJpa;
 
-    public SaveStateImplements(CallStateRepositoryJpa callStateRepositoryJpa){
+    public SaveStateImplements(StateRepository callStateRepositoryJpa){
         this.callStateRepositoryJpa = callStateRepositoryJpa;
 
     }

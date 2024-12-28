@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.implementa.cacheredis.domain.entity.state.State;
 
-public interface CallStateRepositoryJpa {
+public interface StateRepository {
 
     State saveInJpa(State state);
 

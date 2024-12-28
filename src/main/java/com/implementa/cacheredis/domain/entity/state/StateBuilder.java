@@ -5,18 +5,18 @@ public class StateBuilder {
 
     private State estado;
 
-    public State EstadoBuilder(String descricao, String sigla){
+    public State EstadoBuilder(String description, String acronym){
         this.estado = new State();
-        estado.setDescricao(descricao);
-        estado.setSigla(sigla);
+        estado.setDescription(description);
+        estado.setAcronym(acronym);
         
         return this.estado;
     }
-    public State EstadoBuilderId(Long id, String descricao, String sigla){
+    public State EstadoBuilderId(Long id, String description, String acronym){
         this.estado = new State();
         estado.setId(id);
-        estado.setDescricao(descricao);
-        estado.setSigla(sigla);
+        estado.setDescription(description);
+        estado.setAcronym(acronym);
         
         return this.estado;
     }

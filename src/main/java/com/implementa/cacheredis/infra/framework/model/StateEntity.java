@@ -22,8 +22,8 @@ public class StateEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String descricao;
-    private String sigla;
+    private String description;
+    private String acronym;
 
 
 }

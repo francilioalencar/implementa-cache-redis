@@ -37,7 +37,7 @@ public class StateController {
     
     @PostMapping
     public ResponseEntity  saveState(@RequestBody StateDtoPost stateDtoPost){
-        return ResponseEntity.ok(  this.saveState.saveState(new StateBuilder().EstadoBuilder(stateDtoPost.descricao(), stateDtoPost.sigla()) ) );
+        return ResponseEntity.ok(  this.saveState.saveState(new StateBuilder().EstadoBuilder(stateDtoPost.description(), stateDtoPost.acronym()) ) );
     }
     
 

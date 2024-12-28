@@ -4,8 +4,8 @@ public class State {
     
 
     private Long id;
-    private String descricao;
-    private String sigla;
+    private String description;
+    private String acronym;
 
     
     public Long getId() {
@@ -14,17 +14,17 @@ public class State {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getDescricao() {
-        return descricao;
+    public String getDescription() {
+        return description;
     }
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDescription(String description) {
+        this.description = description;
     }
-    public String getSigla() {
-        return sigla;
+    public String getAcronym() {
+        return acronym;
     }
-    public void setSigla(String sigla) {
-        this.sigla = sigla;
+    public void setAcronym(String acronym) {
+        this.acronym = acronym;
     }
 
 

@@ -2,22 +2,22 @@ package com.implementa.cacheredis.application.usecase;
 
 import java.util.List;
 
-import com.implementa.cacheredis.application.gateways.CallStateRepositoryJpa;
+import com.implementa.cacheredis.application.gateways.StateRepository;
 import com.implementa.cacheredis.domain.entity.state.State;
 
 public class FindStateImplements implements FindState {
 
 
-    private final CallStateRepositoryJpa callStateRepositoryJpa;
+    private final StateRepository stateRepository;
 
-    public FindStateImplements(CallStateRepositoryJpa callStateRepositoryJpa){
-        this.callStateRepositoryJpa =  callStateRepositoryJpa;
+    public FindStateImplements(StateRepository stateRepository){
+        this.stateRepository =  stateRepository;
 
     }
 
     @Override
     public State useCaseFindById(Long id) {
-         return this.callStateRepositoryJpa.findByIdInJpa(id); 
+         return this.stateRepository.findByIdInJpa(id); 
        
     }
 
@@ -26,7 +26,7 @@ public class FindStateImplements implements FindState {
 
         
         
-        return this.callStateRepositoryJpa.findAllInJpa() ;
+        return this.stateRepository.findAllInJpa() ;
 
     }
     
