@@ -1,6 +1,10 @@
 version: '3.8'
 
 services:
+  cache-redis:
+    image: redis
+    ports:
+      - "6379:6379"
   mysql:
     image: mysql:8.0.36
     container_name: mysql-cache

@@ -1,6 +1,8 @@
 package com.implementa.cacheredis.domain.entity.state;
 
-public class StateBuilder {
+import java.io.Serializable;
+
+public class StateBuilder implements Serializable {
     
 
     private State estado;
