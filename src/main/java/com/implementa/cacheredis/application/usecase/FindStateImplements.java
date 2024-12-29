@@ -2,6 +2,9 @@ package com.implementa.cacheredis.application.usecase;
 
 import java.util.List;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+
 import com.implementa.cacheredis.application.gateways.StateRepository;
 import com.implementa.cacheredis.domain.entity.state.State;
 

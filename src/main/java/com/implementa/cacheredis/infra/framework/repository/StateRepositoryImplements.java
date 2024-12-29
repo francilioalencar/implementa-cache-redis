@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.implementa.cacheredis.application.gateways.StateRepository;
@@ -21,13 +23,12 @@ public class StateRepositoryImplements implements StateRepository {
         this.stateEntityRepository = stateEntityRepository;
     }
 
+    @CacheEvict(value = "useCaseFindAllState", allEntries = true)
     @Override
     public State saveInJpa(State state) {
         
 
         StateEntity stateEntity = StateEntity.builder().description(state.getDescription()).acronym(state.getAcronym()).build();
-
-        System.out.println(state.getDescription() +"\n"+state.getAcronym());
 
         this.stateEntityRepository.save(stateEntity);
 
@@ -35,7 +36,9 @@ public class StateRepositoryImplements implements StateRepository {
 
     }
 
+    
     @Override
+    @Cacheable(value = "useCaseFindAllState")
     public List<State> findAllInJpa() {
         // TODO Auto-generated method stub
        

@@ -1,8 +1,10 @@
 package com.implementa.cacheredis.domain.entity.city;
 
+import java.io.Serializable;
+
 import com.implementa.cacheredis.domain.entity.state.State;
 
-public class City {
+public class City implements Serializable {
     
     private Long id;
     private String description;

@@ -1,5 +1,6 @@
 package com.implementa.cacheredis.infra.framework.model;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
@@ -22,7 +23,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "state")
 
-public class StateEntity {
+public class StateEntity implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

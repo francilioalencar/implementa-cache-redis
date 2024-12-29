@@ -13,6 +13,9 @@ import com.implementa.cacheredis.domain.entity.state.State;
 import com.implementa.cacheredis.infra.framework.model.CityEntity;
 import com.implementa.cacheredis.infra.framework.model.StateEntity;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+
 
 @Service
 
@@ -27,6 +30,7 @@ public class CiteRepositoryImplements implements CityRepository {
     }
 
 
+    @CacheEvict(value = "findAllInJpaCity", allEntries = true)
     @Override
     public City saveInJpa(City city) {
         
@@ -60,6 +64,7 @@ public class CiteRepositoryImplements implements CityRepository {
     }
 
     @Override
+    @Cacheable(value = "findAllInJpaCity")
     public List<City> findAllInJpa() {
         // TODO Auto-generated method stub
         List<City> cities = new ArrayList<>();

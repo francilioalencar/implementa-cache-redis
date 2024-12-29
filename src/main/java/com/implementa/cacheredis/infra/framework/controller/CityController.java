@@ -17,7 +17,7 @@ import com.implementa.cacheredis.domain.entity.city.CityBuilder;
 import com.implementa.cacheredis.infra.dto.CityDtoPost;
 
 @RestController
-@RequestMapping("/city")
+@RequestMapping("/v1/city")
 public class CityController {
     
 

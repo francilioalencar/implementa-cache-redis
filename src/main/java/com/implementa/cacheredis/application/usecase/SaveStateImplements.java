@@ -1,5 +1,7 @@
 package com.implementa.cacheredis.application.usecase;
 
+import org.springframework.cache.annotation.CacheEvict;
+
 import com.implementa.cacheredis.application.gateways.StateRepository;
 import com.implementa.cacheredis.domain.entity.state.State;
 
@@ -12,6 +14,7 @@ public class SaveStateImplements implements SaveState{
 
     }
 
+   
     @Override
     public State saveState(State state) {
         

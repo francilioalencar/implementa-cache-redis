@@ -1,9 +1,11 @@
 package com.implementa.cacheredis.domain.entity.city;
 
+import java.io.Serializable;
+
 import com.implementa.cacheredis.domain.entity.state.State;
 import com.implementa.cacheredis.infra.framework.model.CityEntity;
 
-public class CityBuilder {
+public class CityBuilder implements Serializable{
     
     private City city;
 
